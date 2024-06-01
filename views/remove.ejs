@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMOVE USER</title>
+    <style>
+        .box{
+            background-color: cornflowerblue;
+            color: black;
+            padding: 25px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: brown;">
+    <h1 style="text-align: center; background-color: aliceblue; color: black;">Enter Your Correct Email and Password.</h1>
+    <div>
+        <form method="post" action="http://localhost:8080/<%= user.id %>/remove?_method=DELETE">
+           <div class="box" style="text-align: center;">
+                <input style="padding: 5px;" type="email"  placeholder="enter your email" name="email">
+           </div>
+           <div class="box" style="text-align: center;" >
+                <input style="padding: 5px;" type="password" placeholder="enter your password" name="password">
+           </div>
+           <div class="box" style="text-align: center;">
+                <button>SUBMIT</button>
+           </div>
+        </form>
+    </div>
+</body>
+</html>

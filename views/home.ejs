@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <style>
+        table,tr,td{
+            border: 1px solid bisque;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body style="background-color: #000000; color: aliceblue;">
+   <center>
+     <h1>User's Data</h1>
+     <br>
+     <form action="http://localhost:8080/user/new" method="get">
+        <button style="border-radius: 15px; background-color: rgb(103, 160, 95); color: #000000; padding: 5px; cursor: pointer;">
+            ADD USER
+        </button>
+     </form>
+     <br>
+     <br>
+     <form action="http://localhost:8080/" method="get">
+        <button style="border-radius: 15px; background-color: rgb(103, 160, 95); color: #000000; padding: 5px; cursor: pointer;">
+            Total User
+        </button>
+     </form>
+     <br>
+     <br>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>UserName</td>
+            <td>Email</td>
+        </tr>
+        <% for ( let data of user) { %>
+          <tr>
+            <td><%= data.id %></td>
+            <td><%= data.username %></td>
+            <td><%= data.email %></td>
+            <td>
+                <form method="get"
+                 action="http://localhost:8080/users/<%= data.id %>">
+                  <button style="border-radius: 15px; background-color: cadetblue; color: #000000; padding: 5px; cursor: pointer;">Edit</button>
+                </form>
+            </td>
+            <td>
+                <form method="get"
+                    action="http://localhost:8080/users/<%= data.id %>/remove">
+                    <button style="border-radius: 15px; background-color: red; color: #000000; padding: 5px; cursor: pointer;">Delete</button>
+                </form>
+            </td>
+          </tr>
+       <% } %>
+    </table>
+</center>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <style>
+        div{
+            height: 100vh;
+            width: 100vw;
+            background-color: cadetblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+      <div>
+        <form  method="post" action="http://localhost:8080/users">
+         <table border="2">
+            <tr>
+                <td>UserName</td>
+                <td><input type="text"  style="padding: 5px;" name="username" placeholder="enter your name"></td>
+                
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" style="padding: 5px;" placeholder="enter your email"></td>
+            </tr>
+            <tr>
+                <td>PassWord</td>
+                <td><input type="password"name="password" style="padding: 5px;" placeholder="enter your password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><button>SUBMIT</button></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+</body>
+</html>
