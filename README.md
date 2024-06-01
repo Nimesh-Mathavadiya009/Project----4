@@ -14,7 +14,7 @@
 # Frontend: EJS
 # Database: MySQL2
 # Data Generation: Faker
-# Check out the project [link to your project or repository] and let me know your thoughts! 😊
+# Check out the project and let me know your thoughts! 😊
 
 # #NodeJS #ExpressJS #EJS #MySQL #Faker #WebDevelopment #Coding #Programming #Tech
 
